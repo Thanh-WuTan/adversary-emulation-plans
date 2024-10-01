@@ -1,4 +1,4 @@
-import os
+import time
 
 from main import PAYLOAD_DIR
 from objects.base_planning import BasePlanningService
@@ -66,6 +66,6 @@ class Operation:
                 steps.append(learner._save(link=link, result=result, operation=self, executor=ex, step_order=step_order))
                 print("Stdout: %s" % result.stdout)
                 print("Stderr: %s" % result.stderr)
-                os.sleep(2)
+                time.sleep(2)
             attire.add_procedure(steps, ability, order) 
         attire.create_attire_file()
