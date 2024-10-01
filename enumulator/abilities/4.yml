@@ -1,0 +1,43 @@
+ability_id: 7c42a30c-c8c7-44c5-80a8-862d364ac1e4
+access: {}
+additional_info: {}
+buckets:
+- discovery
+delete_payload: true
+description: Determine whether or not UAC is enabled
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: echo $(get-uac)
+  language: null
+  name: psh
+  parsers: []
+  payloads: []
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: echo $(get-uac)
+  language: null
+  name: pwsh
+  parsers: []
+  payloads: []
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: UAC Status
+plugin: stockpile
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: discovery
+technique_id: T1518.001
+technique_name: 'Software Discovery: Security Software Discovery'

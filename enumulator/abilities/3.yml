@@ -1,0 +1,47 @@
+ability_id: 4d9b079c-9ede-4116-8b14-72ad3a5533af
+access: {}
+additional_info: {}
+buckets:
+- discovery
+delete_payload: true
+description: Capture running processes via PowerShell
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: 'get-process >> $env:APPDATA\vmtools.log;
+
+    cat $env:APPDATA\vmtools.log'
+  language: null
+  name: psh
+  parsers: []
+  payloads: []
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: 'get-process >> $env:APPDATA\vmtools.log;
+
+    cat $env:APPDATA\vmtools.log'
+  language: null
+  name: pwsh
+  parsers: []
+  payloads: []
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: PowerShell Process Enumeration
+plugin: stockpile
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: discovery
+technique_id: T1057
+technique_name: Process Discovery

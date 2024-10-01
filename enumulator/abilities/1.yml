@@ -1,0 +1,33 @@
+ability_id: 94f21386-9547-43c4-99df-938ab05d45ce
+access: {}
+additional_info: {}
+buckets:
+- collection
+delete_payload: true
+description: Capture process id, executable path, pid and parent pid before writing
+  to disk
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: 'wmic process get executablepath,name,processid,parentprocessid >> $env:APPDATA\vmtools.log;
+
+    cat $env:APPDATA\vmtools.log'
+  language: null
+  name: psh
+  parsers: []
+  payloads: []
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: WMIC Process Enumeration
+plugin: stockpile
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: collection
+technique_id: T1047
+technique_name: WMIC
