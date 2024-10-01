@@ -1,0 +1,31 @@
+ability_id: 160a1e0f-0f9b-49bb-a0fe-7e362b51737f
+access: {}
+additional_info: {}
+buckets:
+- collection
+delete_payload: true
+description: Compress and stage data for exfiltration
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: rar.exe a "#{rar_archive_name}" "#{rar_files}"
+  language: null
+  name: cmd
+  parsers: []
+  payloads:
+  - rar.exe
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: Archive Collected Data - Archive via Utility
+plugin: emu
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: collection
+technique_id: T1560.001
+technique_name: Archive Collected Data - Archive via Utility

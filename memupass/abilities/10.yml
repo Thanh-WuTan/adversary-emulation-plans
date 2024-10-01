@@ -1,0 +1,32 @@
+ability_id: 4b1748e5-532c-453c-b195-557ce5550fef
+access: {}
+additional_info: {}
+buckets:
+- lateral-movement
+delete_payload: true
+description: Using compiled psexec.py to achieve remote code execution
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: '"#{psexec_local_path}\psexec.exe" "#{psexec_user}":"#{psexec_password}"@"#{psexec_remote_host}"
+    "#{psexec_cmd}"'
+  language: null
+  name: cmd
+  parsers: []
+  payloads:
+  - psexec.exe
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: Service Execution
+plugin: emu
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: lateral-movement
+technique_id: T1569.002
+technique_name: 'System Services: Service Execution'

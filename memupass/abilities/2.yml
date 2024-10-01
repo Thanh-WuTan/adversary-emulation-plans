@@ -1,0 +1,30 @@
+ability_id: 7877ec4d-3c11-40f2-9650-35261e4ac879
+access: {}
+additional_info: {}
+buckets:
+- discovery
+delete_payload: true
+description: Display network shares
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: net use
+  language: null
+  name: cmd
+  parsers: []
+  payloads: []
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: Network Share Discovery
+plugin: emu
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: discovery
+technique_id: T1135
+technique_name: Network Share Discovery

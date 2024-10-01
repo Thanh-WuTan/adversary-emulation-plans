@@ -1,0 +1,31 @@
+ability_id: 9d543214-6476-429a-9ca1-cf12233b808c
+access: {}
+additional_info: {}
+buckets:
+- discovery
+delete_payload: true
+description: Scan for nameservers and enumerate NetBIOS sessions
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: '"#{netsess_local_path}\netsess.exe" #{netsess_remote_ip}'
+  language: null
+  name: cmd
+  parsers: []
+  payloads:
+  - netsess.exe
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: System Network Configuration Discovery
+plugin: emu
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: discovery
+technique_id: T1016
+technique_name: System Network Configuration Discovery

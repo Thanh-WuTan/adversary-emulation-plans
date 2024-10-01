@@ -1,0 +1,31 @@
+ability_id: 814005f7-c8d3-45c8-aea2-45758b2d6e90
+access: {}
+additional_info: {}
+buckets:
+- discovery
+delete_payload: true
+description: Scan for nameservers and enumerate NetBIOS sessions
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: '"#{nbtscan_local_path}\nbtscan.exe" #{nbt_ip_range}'
+  language: null
+  name: cmd
+  parsers: []
+  payloads:
+  - nbtscan.exe
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: System Network Configuration Discovery
+plugin: emu
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: discovery
+technique_id: T1016
+technique_name: System Network Configuration Discovery

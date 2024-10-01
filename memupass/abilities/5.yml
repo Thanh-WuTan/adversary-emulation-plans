@@ -1,0 +1,31 @@
+ability_id: b6026408-c815-47ca-bbb0-6b74591badc8
+access: {}
+additional_info: {}
+buckets:
+- discovery
+delete_payload: true
+description: Enumerate remote hosts for running services using tcping
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: '"#{tcping_local_path}\tcping.exe" "#{tcping_remote_ip}" "#{tcping_remote_port}"'
+  language: null
+  name: cmd
+  parsers: []
+  payloads:
+  - tcping.exe
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: Network Service Scanning
+plugin: emu
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: discovery
+technique_id: T1046
+technique_name: Network Service Scanning

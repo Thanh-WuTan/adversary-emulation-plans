@@ -1,0 +1,31 @@
+ability_id: 236d1357-64f9-4a98-afc1-bccaa89aba8c
+access: {}
+additional_info: {}
+buckets:
+- persistence
+delete_payload: true
+description: menuPass is reported to have used scheduled tasks to persist
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: schtasks /create /sc "#{schtask_schedule}" /tn "#{schtask_taskname}" /tr
+    "#{schtask_taskrun}" /ru "#{schtask_username}"
+  language: null
+  name: cmd
+  parsers: []
+  payloads: []
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: Scheduled Task Persistence
+plugin: emu
+privilege: Elevated
+repeatable: false
+requirements: []
+singleton: false
+tactic: persistence
+technique_id: T1553.005
+technique_name: 'Scheduled Task/Job: Scheduled Task'

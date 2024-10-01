@@ -1,0 +1,731 @@
+facts:
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: bitsadmin_remote_ip
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: bitsadmin_remote_ip
+  unique: 'bitsadmin_remote_ipremote-host
+
+    '
+  value: 'remote-host
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: bitsadmin_b64_encoded_string
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: bitsadmin_b64_encoded_string
+  unique: 'bitsadmin_b64_encoded_stringTWUEGJDITXAONVPUOWFV
+
+    '
+  value: 'TWUEGJDITXAONVPUOWFV
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: host_address
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: host_address
+  unique: 'host_address192.0.2.10
+
+    '
+  value: '192.0.2.10
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: tcping_local_path
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: tcping_local_path
+  unique: 'tcping_local_pathC:\Windows\Temp
+
+    '
+  value: 'C:\Windows\Temp
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: tcping_url
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: tcping_url
+  unique: tcping_urlhttps://download.elifulkerson.com//files/tcping/0.39/tcping.exe
+  value: https://download.elifulkerson.com//files/tcping/0.39/tcping.exe
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: tcping_remote_ip
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: tcping_remote_ip
+  unique: 'tcping_remote_ip192.0.2.10
+
+    '
+  value: '192.0.2.10
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: tcping_remote_port
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: tcping_remote_port
+  unique: 'tcping_remote_port445
+
+    '
+  value: '445
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: nbtscan_local_path
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: nbtscan_local_path
+  unique: 'nbtscan_local_pathC:\Windows\Temp
+
+    '
+  value: 'C:\Windows\Temp
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: nbtscan_url
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: nbtscan_url
+  unique: 'nbtscan_urlhttp://unixwiz.net/tools/nbtscan-1.0.35.exe
+
+    '
+  value: 'http://unixwiz.net/tools/nbtscan-1.0.35.exe
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: nbt_ip_range
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: nbt_ip_range
+  unique: 'nbt_ip_range192.0.2.34/24
+
+    '
+  value: '192.0.2.34/24
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: netsess_local_path
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: netsess_local_path
+  unique: 'netsess_local_pathC:\Windows\Temp
+
+    '
+  value: 'C:\Windows\Temp
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: netsess_url
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: netsess_url
+  unique: 'netsess_urlhttp://www.joeware.net/downloads/files/NetSess.zip
+
+    '
+  value: 'http://www.joeware.net/downloads/files/NetSess.zip
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: netsess_remote_ip
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: netsess_remote_ip
+  unique: 'netsess_remote_ip192.0.2.10
+
+    '
+  value: '192.0.2.10
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: mimikatz_local_path
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: mimikatz_local_path
+  unique: 'mimikatz_local_pathC:\Windows\Temp
+
+    '
+  value: 'C:\Windows\Temp
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: mimikatz_arch
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: mimikatz_arch
+  unique: mimikatz_archx64
+  value: x64
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: mimikatz_url
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: mimikatz_url
+  unique: mimikatz_urlhttps://github.com/gentilkiwi/mimikatz/releases/download/2.2.0-20200917/mimikatz_trunk.zip
+  value: https://github.com/gentilkiwi/mimikatz/releases/download/2.2.0-20200917/mimikatz_trunk.zip
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: mimikatz_module
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: mimikatz_module
+  unique: 'mimikatz_modulesekurlsa::logonpasswords
+
+    '
+  value: 'sekurlsa::logonpasswords
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: secretsdump_local_path
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: secretsdump_local_path
+  unique: 'secretsdump_local_pathC:\Windows\Temp
+
+    '
+  value: 'C:\Windows\Temp
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: secretsdump_url
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: secretsdump_url
+  unique: secretsdump_urlhttps://github.com/ropnop/impacket_static_binaries/releases/download/0.9.22.dev-binaries/secretsdump_windows.exe
+  value: https://github.com/ropnop/impacket_static_binaries/releases/download/0.9.22.dev-binaries/secretsdump_windows.exe
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: secretsdump_domain
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: secretsdump_domain
+  unique: secretsdump_domainDOMAIN
+  value: DOMAIN
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: secretsdump_user
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: secretsdump_user
+  unique: secretsdump_userAdministrator
+  value: Administrator
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: secretsdump_pass
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: secretsdump_pass
+  unique: secretsdump_passPassword123
+  value: Password123
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: secretsdump_remote_host
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: secretsdump_remote_host
+  unique: secretsdump_remote_host192.0.2.10
+  value: 192.0.2.10
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: psexec_local_path
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: psexec_local_path
+  unique: 'psexec_local_pathC:\Windows\Temp
+
+    '
+  value: 'C:\Windows\Temp
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: psexec_url
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: psexec_url
+  unique: psexec_urlhttps://github.com/ropnop/impacket_static_binaries/releases/download/0.9.22.dev-binaries/psexec_windows.exe
+  value: https://github.com/ropnop/impacket_static_binaries/releases/download/0.9.22.dev-binaries/psexec_windows.exe
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: psexec_user
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: psexec_user
+  unique: 'psexec_userAdministrator
+
+    '
+  value: 'Administrator
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: psexec_password
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: psexec_password
+  unique: 'psexec_passwordbadpassword123
+
+    '
+  value: 'badpassword123
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: psexec_remote_host
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: psexec_remote_host
+  unique: 'psexec_remote_host192.0.2.10
+
+    '
+  value: '192.0.2.10
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: psexec_cmd
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: psexec_cmd
+  unique: 'psexec_cmd-c d.exe
+
+    '
+  value: '-c d.exe
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: rar_archive_name
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: rar_archive_name
+  unique: 'rar_archive_namess.rar
+
+    '
+  value: 'ss.rar
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: rar_files
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: rar_files
+  unique: 'rar_filesC:\Windows\Temp
+
+    '
+  value: 'C:\Windows\Temp
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: copy_filename
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: copy_filename
+  unique: 'copy_filenameaa.rar
+
+    '
+  value: 'aa.rar
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: pscp_url
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: pscp_url
+  unique: pscp_urlhttps://the.earth.li/~sgtatham/putty/latest/w64/pscp.exe
+  value: https://the.earth.li/~sgtatham/putty/latest/w64/pscp.exe
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: pscp_local_path
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: pscp_local_path
+  unique: 'pscp_local_pathC:\Windows\Temp
+
+    '
+  value: 'C:\Windows\Temp
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: pscp_exfil_files
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: pscp_exfil_files
+  unique: 'pscp_exfil_filesC:\Windows\Temp\exfil
+
+    '
+  value: 'C:\Windows\Temp\exfil
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: pscp_user
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: pscp_user
+  unique: 'pscp_userAdministrator
+
+    '
+  value: 'Administrator
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: pscp_server
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: pscp_server
+  unique: 'pscp_server192.0.2.10
+
+    '
+  value: '192.0.2.10
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: pscp_drop_location
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: pscp_drop_location
+  unique: 'pscp_drop_locationtemp
+
+    '
+  value: 'temp
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: wmiexec_local_path
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: wmiexec_local_path
+  unique: 'wmiexec_local_pathC:\Windows\Temp
+
+    '
+  value: 'C:\Windows\Temp
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: wmiexec_url
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: wmiexec_url
+  unique: 'wmiexec_urlhttps://raw.githubusercontent.com/Twi1ight/AD-Pentest-Script/master/wmiexec.vbs
+
+    '
+  value: 'https://raw.githubusercontent.com/Twi1ight/AD-Pentest-Script/master/wmiexec.vbs
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: wmiexec_remote_host
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: wmiexec_remote_host
+  unique: 'wmiexec_remote_host192.0.2.10
+
+    '
+  value: '192.0.2.10
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: schtask_schedule
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: schtask_schedule
+  unique: 'schtask_scheduleDAILY
+
+    '
+  value: 'DAILY
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: schtask_taskname
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: schtask_taskname
+  unique: 'schtask_tasknametaskname
+
+    '
+  value: 'taskname
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: schtask_taskrun
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: schtask_taskrun
+  unique: 'schtask_taskrunC:\Windows\Temp
+
+    '
+  value: 'C:\Windows\Temp
+
+    '
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: schtask_username
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+  technique_id: null
+  trait: schtask_username
+  unique: 'schtask_usernameusername
+
+    '
+  value: 'username
+
+    '
+id: a66d2d89-ce1f-50d1-8730-a79e45a1b5a2
+name: menuPass (Emu)
+plugin: emu
+relationships: []
+rules: []
