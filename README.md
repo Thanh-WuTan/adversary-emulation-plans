@@ -1,0 +1,1 @@
+# adversary-emulation-plans
