@@ -42,7 +42,7 @@ executors:
   timeout: 60
   uploads: []
   variations: []
-name: Data from staged file (T1074) and Exfiltration over C2 Channel (T1041) (2)
+name: Data from staged file (T1074) and Exfiltration over C2 Channel (T1041)
 plugin: emu
 privilege: ''
 repeatable: false

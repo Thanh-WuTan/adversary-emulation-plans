@@ -65,7 +65,7 @@ executors:
   timeout: 60
   uploads: []
   variations: []
-name: File and Directory Discovery (T1083) (2)
+name: File and Directory Discovery (T1083)
 plugin: emu
 privilege: ''
 repeatable: false

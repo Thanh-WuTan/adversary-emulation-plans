@@ -19,7 +19,7 @@ executors:
   timeout: 60
   uploads: []
   variations: []
-name: Account Discovery (2)
+name: Account Discovery
 plugin: emu
 privilege: ''
 repeatable: false

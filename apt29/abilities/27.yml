@@ -32,7 +32,7 @@ executors:
   timeout: 60
   uploads: []
   variations: []
-name: Remote System Discovery (2)
+name: Remote System Discovery
 plugin: emu
 privilege: ''
 repeatable: false

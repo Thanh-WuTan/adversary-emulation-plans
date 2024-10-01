@@ -20,7 +20,7 @@ executors:
   timeout: 60
   uploads: []
   variations: []
-name: System Information Discovery (2)
+name: System Information Discovery
 plugin: emu
 privilege: ''
 repeatable: false

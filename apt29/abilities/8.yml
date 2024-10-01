@@ -38,7 +38,7 @@ executors:
   timeout: 60
   uploads: []
   variations: []
-name: Process Discovery (2)
+name: Process Discovery
 plugin: emu
 privilege: ''
 repeatable: false

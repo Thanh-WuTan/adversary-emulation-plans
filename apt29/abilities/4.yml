@@ -20,7 +20,7 @@ executors:
   timeout: 60
   uploads: []
   variations: []
-name: System Network Configuration Discovery (2)
+name: System Network Configuration Discovery
 plugin: emu
 privilege: ''
 repeatable: false

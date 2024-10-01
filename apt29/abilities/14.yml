@@ -20,7 +20,7 @@ executors:
   timeout: 60
   uploads: []
   variations: []
-name: Permissions Groups Discovery (2)
+name: Permissions Groups Discovery
 plugin: emu
 privilege: ''
 repeatable: false

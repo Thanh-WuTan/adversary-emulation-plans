@@ -65,7 +65,7 @@ executors:
   timeout: 60
   uploads: []
   variations: []
-name: Query Registry (2)
+name: Query Registry
 plugin: emu
 privilege: ''
 repeatable: false

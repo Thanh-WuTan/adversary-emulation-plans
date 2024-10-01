@@ -19,7 +19,7 @@ executors:
   timeout: 60
   uploads: []
   variations: []
-name: System Service Discovery (2)
+name: System Service Discovery
 plugin: emu
 privilege: ''
 repeatable: false
