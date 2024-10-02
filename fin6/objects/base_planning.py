@@ -120,7 +120,8 @@ class BasePlanningService:
             re_variable = re.compile(pattern, flags=re.DOTALL)
             copy_test = re.sub(re_variable, str(var.escaped(executor)).strip().encode('unicode-escape').decode('utf-8'),
                                copy_test)
-             
+            print(copy_test)
+
         return copy_test, score, used
 
     def apply_rules(self, facts):
