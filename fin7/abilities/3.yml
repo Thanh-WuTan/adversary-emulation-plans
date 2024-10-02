@@ -1,0 +1,43 @@
+ability_id: ab937ef4-7c66-4349-ad3b-658c41fcf4c5
+access: {}
+additional_info: {}
+buckets:
+- discovery/execution
+delete_payload: true
+description: Perform process discovery (T1057)
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: powershell.exe -c "ps"
+  language: null
+  name: psh
+  parsers: []
+  payloads: []
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: powershell.exe -c "ps"
+  language: null
+  name: pwsh
+  parsers: []
+  payloads: []
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: Enumerate
+plugin: emu
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: discovery/execution
+technique_id: T1057
+technique_name: Process Discovery

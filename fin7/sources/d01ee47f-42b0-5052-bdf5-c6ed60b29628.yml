@@ -1,0 +1,58 @@
+facts:
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: domain
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: d01ee47f-42b0-5052-bdf5-c6ed60b29628
+  technique_id: null
+  trait: domain
+  unique: domainhospitality
+  value: hospitality
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: domain.admin.username
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: d01ee47f-42b0-5052-bdf5-c6ed60b29628
+  technique_id: null
+  trait: domain.admin.username
+  unique: domain.admin.usernamekmitnick
+  value: kmitnick
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: domain.admin.hash
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: d01ee47f-42b0-5052-bdf5-c6ed60b29628
+  technique_id: null
+  trait: domain.admin.hash
+  unique: domain.admin.hashc3aa78cd0827b8e8603ac1c8996e6556
+  value: c3aa78cd0827b8e8603ac1c8996e6556
+- collected_by: []
+  created: '2024-10-01T06:46:24Z'
+  limit_count: -1
+  links: []
+  name: itadmin.ip.address
+  origin_type: IMPORTED
+  relationships: []
+  score: 1
+  source: d01ee47f-42b0-5052-bdf5-c6ed60b29628
+  technique_id: null
+  trait: itadmin.ip.address
+  unique: itadmin.ip.address10.0.1.6
+  value: 10.0.1.6
+id: d01ee47f-42b0-5052-bdf5-c6ed60b29628
+name: FIN7 (Emu)
+plugin: emu
+relationships: []
+rules: []
