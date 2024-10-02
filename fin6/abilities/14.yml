@@ -1,0 +1,32 @@
+ability_id: 661efd66-d876-41de-88ee-ba9ec4328154
+access: {}
+additional_info: {}
+buckets:
+- execution
+delete_payload: true
+description: WMIC to execute a process on a remote host. Specify the remote IP using
+  node parameter.  FIN6 is reported to have used WMI to execute code on remote systems.
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup:
+  - wmic /node:#{node} process where name="#{process_name_to_kill}" delete >nul 2>&1
+  code: null
+  command: wmic /node:#{node} process call create "#{path_to_execute}"
+  language: null
+  name: cmd
+  parsers: []
+  payloads: []
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: WMIC Remote Process Execution
+plugin: emu
+privilege: Elevated
+repeatable: false
+requirements: []
+singleton: false
+tactic: execution
+technique_id: T1047
+technique_name: Windows Management Instrumentation

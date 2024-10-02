@@ -1,0 +1,32 @@
+ability_id: e4027dff-280b-4964-82be-b35a40c4a493
+access: {}
+additional_info: {}
+buckets:
+- execution
+delete_payload: true
+description: Use PsExec to execute a command on a remote host. FIN6 is reported to
+  have used a variant of PsExec to execute code on remote hosts.
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: '"#{psexec_exe}" \\#{remote_host} #{remote_command}'
+  language: null
+  name: cmd
+  parsers: []
+  payloads:
+  - PsExec.exe
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: PsExec Remote Command
+plugin: emu
+privilege: Elevated
+repeatable: false
+requirements: []
+singleton: false
+tactic: execution
+technique_id: T1569.002
+technique_name: 'System Services: Service Execution'

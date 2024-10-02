@@ -1,0 +1,31 @@
+ability_id: 2738b811-a360-4a4f-af9d-704343ebab4d
+access: {}
+additional_info: {}
+buckets:
+- discovery
+delete_payload: true
+description: List groups and output the results to a text file.
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: '"#{adfind_exe}" -f (objectcategory=group) > ad_group.txt'
+  language: null
+  name: cmd
+  parsers: []
+  payloads:
+  - adfind.exe
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: Enumerate AD groups
+plugin: emu
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: discovery
+technique_id: T1069.002
+technique_name: 'Permission Groups Discovery: Domain Groups'
