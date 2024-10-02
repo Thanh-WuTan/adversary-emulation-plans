@@ -14,7 +14,7 @@ ADV_ID = '123700e5-44c8-4894-a409-6484992c8846'
 PWD = os.path.dirname(__file__)
 SOURCE_DIR = os.path.join(PWD, 'sources')
 ABILTIY_DIR = os.path.join(PWD, 'abilities')
-PAYLOAD_DIR = os.path.join(PWD)
+PAYLOAD_DIR = os.path.join(PWD, 'payloads')
 
 def read_yaml(filepath):
     with open(filepath, 'r') as file:
