@@ -1,0 +1,51 @@
+ability_id: d04a02e1-a05c-46f8-adf0-c036266fe0a1
+access: {}
+additional_info: {}
+buckets:
+- discovery
+delete_payload: true
+description: Upload and execute the PillowMint credit card scraper as debug.exe
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup:
+  - Remove-Item -Force debug.exe;
+  code: null
+  command: 'Move-Item pillowMint.exe debug.exe;
+
+    .\debug.exe;'
+  language: null
+  name: psh
+  parsers: []
+  payloads:
+  - pillowMint.exe
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+- additional_info: {}
+  build_target: null
+  cleanup:
+  - Remove-Item -Force debug.exe;
+  code: null
+  command: 'Move-Item pillowMint.exe debug.exe;
+
+    .\debug.exe;'
+  language: null
+  name: pwsh
+  parsers: []
+  payloads:
+  - pillowMint.exe
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: Execute PillowMint Credit Card Scraper
+plugin: emu
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: discovery
+technique_id: T1057
+technique_name: Process Discovery

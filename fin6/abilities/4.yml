@@ -1,0 +1,31 @@
+ability_id: 02a96c18-f700-482d-88a8-bd311f6c41dc
+access: {}
+additional_info: {}
+buckets:
+- discovery
+delete_payload: true
+description: Performs a full forest search and dumps trust objects to a text file.
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: '"#{adfind_exe}" -gcb -sc trustdmp > ad_trustdmp.txt'
+  language: null
+  name: cmd
+  parsers: []
+  payloads:
+  - adfind.exe
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: Enumerate AD trust objects
+plugin: emu
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: discovery
+technique_id: T1482
+technique_name: Domain Trust Discovery

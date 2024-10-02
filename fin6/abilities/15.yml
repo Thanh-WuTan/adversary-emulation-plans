@@ -1,0 +1,31 @@
+ability_id: 44d82f6f-f367-4db7-aa65-a9e5717b1a21
+access: {}
+additional_info: {}
+buckets:
+- persistence
+delete_payload: true
+description: FIN6 utilizes cmd to execute Registry Run Keys
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: '"C:\Windows\System32\reg.exe" ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+    /v "#{value_name}" /t REG_SZ /d "#{data}" /f'
+  language: null
+  name: cmd
+  parsers: []
+  payloads: []
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: Registry Run Keys
+plugin: emu
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: persistence
+technique_id: T1547.001
+technique_name: 'Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder'

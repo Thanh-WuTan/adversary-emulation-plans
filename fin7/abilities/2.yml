@@ -1,0 +1,45 @@
+ability_id: 82d2f5c7-7561-4d91-96d2-959473b9ad2b
+access: {}
+additional_info: {}
+buckets:
+- execution
+delete_payload: true
+description: Execution of previously placed stager.
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: powershell.exe -ExecutionPolicy Bypass -NoExit -File C:\\Users\\#{domain.admin.username}.#{domain}\\AppData\\Local\\stager.ps1"
+  language: null
+  name: psh
+  parsers: []
+  payloads:
+  - stager.ps1
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: powershell.exe -ExecutionPolicy Bypass -NoExit -File C:\\Users\\#{domain.admin.username}.#{domain}\\AppData\\Local\\stager.ps1"
+  language: null
+  name: pwsh
+  parsers: []
+  payloads:
+  - stager.ps1
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: Execution of stager.ps1
+plugin: emu
+privilege: ''
+repeatable: false
+requirements: []
+singleton: false
+tactic: execution
+technique_id: T1059.003
+technique_name: Command and Scripting Interpreter - Windows Command Shell
